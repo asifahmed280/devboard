@@ -9,4 +9,11 @@ const options = {
 
 const formateDate = today.toLocaleDateString("en-US",options);
 
-document.getElementById("today-date").innerText = formateDate
+document.getElementById("today-date").innerText = formateDate;
+
+
+const card = document.getElementById("card-1");
+
+
+
+

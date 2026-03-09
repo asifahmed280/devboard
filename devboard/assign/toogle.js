@@ -1,8 +1,5 @@
 
-
 function btnClick(event,task,number,cardTitleID,historyID){
-
-    alert("You have completed task");
 
     // disable the click button correctly
     const clickedBtn = event.target;
@@ -12,12 +9,14 @@ function btnClick(event,task,number,cardTitleID,historyID){
 
     // task number decreasing
     const taskAssign = document.getElementById(task).innerText;
-    if(taskAssign === 0){
-        alert('Congrats! You have completed all the current tasks')
-    }
     const convertedAssign = parseInt(taskAssign);
+    //coovertedAssign--; also can use this
     const  completedTask = convertedAssign - 1;
     document.getElementById(task).innerText = completedTask;
+    
+    if(completedTask === 0){
+        alert("Congratulations! All tasks completed")
+    }
 
     // point add
     const point = document.getElementById(number).innerText;
@@ -28,11 +27,24 @@ function btnClick(event,task,number,cardTitleID,historyID){
 
     // history add 
     const title = document.getElementById(cardTitleID).innerText;
+    const history = document.getElementById(historyID);
 
-    const titleBlock = document.createElement("div")
-    titleBlock.innerText = `You have completed the task ${title} at ${new Date().toLocaleDateString()}`;
-    titleBlock.classList.add("bg-gray-100", "p-3","rounded-lg", "mb-2", "shadow-sm")
-    document.getElementById(historyID).appendChild(titleBlock);
+    const titleBlock = document.createElement("div");
+    titleBlock.innerText = `You have completed the task ${title} at ${new Date().toLocaleTimeString()}`;
 
-    clickedBtn.closest('.card-class-name').classList.add('opacity-50','pointer-events-none');
+    titleBlock.classList.add("bg-gray-100", "p-3","rounded-lg", "mb-2", "shadow-sm");
+    
+    history.appendChild(titleBlock);
+ 
+}
+
+
+/// hover effect on card
+
+function handleHover(e) {
+    if (e.type === "mouseenter") {
+        this.style.backgroundColor = "lightblue";
+    } else if (e.type === "mouseleave") {
+        this.style.backgroundColor = "#f1f5f9";
+    }
 }

@@ -14,51 +14,55 @@
     </style>
 </head>
 
-<body class="px-4 lg:px-20 min-h-screen flex flex-col">
+<body class="px-4 lg:px-20 max-auto min-h-screen flex flex-col">
 
     <!--Navbar section-->
     <nav class="mt-2">
         <div class="navbar bg-base-100 shadow-sm rounded-xl mb-3 px-3">
             <div class="flex-1">
-                <div class="flex">
-                    <img class="gap-0" src="./assets/logo.png" alt="">
-                    <a class="btn btn-ghost text-xl py-6"><span class="text-zinc-400">Dev</span>Board</a>
+                <div class="flex justify-start items-center gap-3">
+                    <img src="./assets/logo.png" alt="">
+                    <div>
+                        <a class="text-xl py-6 cursor-pointer font-bold"><span class="text-zinc-400">Dev</span>Board</a>
+                    </div>
                 </div>
             </div>
             <div class="flex">
                 <div class="flex">
                     <div class="flex shadow-sm rounded-full bg-slate-200 justify-center items-center p-2 pr-2">
                         <img class="h-5 w-5" src="./assets/checkbox.png" alt="">
-                        <p  id="number" class="font-bold pl-2">23</p>
+                        <p id="number" class="font-bold pl-2">23</p>
                     </div>
                 </div>
 
-                <button class="btn btn-circle p-1 ml-5 bg-slate-200"> <img src="./assets/theme-btn.png" alt="">
+                <button id="theme-btn" class="btn btn-circle p-1 ml-5 bg-slate-200"> <img src="./assets/theme-btn.png"
+                        alt="">
                 </button>
             </div>
         </div>
     </nav>
 
 
-    <main class="flex gap-3 flex-1">
+    <main class="flex gap-3 flex-1 mb-2">
         <!-- main section-->
         <section class="bg-white rounded-xl p-4 flex-1">
             <div class="grid grid-cols-4 gap-2">
-                <div class="card-body bg-slate-100 rounded-xl flex justify-center items-center">
-                    <div class="flex items-center justify-center gap-2">
+                <div class="card-body bg-slate-100 rounded-xl flex justify-around items-center">
+                    <div class="flex justify-around items-center gap-5">
                         <div>
                             <img src="./assets/checkbox.png" alt="">
                         </div>
-                        <div class="font-bold">
+                        <div class="font-bold flex flex-col justify-center items-center">
                             <p>Task Assigned</p>
                             <p id="task">6</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-body bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl col-span-2 ">
+                <div id="discover-btn"
+                    class="card-body bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl col-span-2 cursor-pointer ">
                     <div class="flex justify-center items-center gap-5">
-                        <img class="" src="./assets/board.png" alt="">
+                        <img src="./assets/board.png" alt="">
                         <h3 class="font-bold text-white text-xl">Discover Something New Today!</h3>
                     </div>
 
@@ -81,101 +85,101 @@
 
             <div class="divider"></div>
 
-            <div class="grid grid-cols-3 gap-3">
-                <div id="card-1" class="card-body bg-slate-100 rounded-xl">
+            <div class="grid grid-cols-3 gap-3 max-auto">
+                <div id="card-1" class="card-body card-class-name bg-slate-100 rounded-xl hover:shadow-lg transition">
                     <strong class="rounded-md bg-white font-semibold p-2 w-fit">Shop Ease</strong>
-                    <h2 id="cardTitle" class="card-title">Fix Mobile Button Issue</h2>
-                    <div class="bg-white rounded-md p-4">
+                    <h2 id="cardTitle-1" class="card-title mt-1">Fix Mobile Button Issue</h2>
+                    <div class="bg-white rounded-md p-4 mt-1">
                         <p>A card component has a figure, a body part, and inside body there are title and actions
                             parts
                         </p>
                     </div>
-                    <div class="card-actions justify-between">
+                    <div class="card-actions justify-between mt-2">
                         <div class="font-semibold">
                             <p>Deadline</p>
                             <p>21 March 2026</p>
                         </div>
-                        <button id="complete-btn" class="btn btn-primary rounded-md ">Completed</button>
+                        <button id="complete-btn-1" class="btn btn-primary rounded-md ">Completed</button>
                     </div>
                 </div>
-                <div class="card-body bg-slate-100 rounded-xl">
+                <div id="card-2" class="card-body card-class-name bg-slate-100 rounded-xl hover:shadow-lg transition">
                     <strong class="rounded-md bg-white font-semibold p-2 w-fit">Soft Pay</strong>
-                    <h2 class="card-title">Add Pay Success Modal</h2>
-                    <div class="bg-white rounded-md p-4">
+                    <h2 id="cardTitle-2" class="card-title mt-1">Add Pay Success Modal</h2>
+                    <div class="bg-white rounded-md p-4 mt-1">
                         <p>A card component has a figure, a body part, and inside body there are title and actions
                             parts
                         </p>
                     </div>
-                    <div class="card-actions justify-between">
+                    <div class="card-actions justify-between mt-2">
                         <div class="font-semibold">
                             <p>Deadline</p>
                             <p>25 March 2026</p>
                         </div>
-                        <button id="complete-btn"class="btn btn-primary rounded-md ">Completed</button>
+                        <button id="complete-btn-2" class="btn btn-primary rounded-md ">Completed</button>
                     </div>
                 </div>
-                <div class="card-body bg-slate-100 rounded-xl">
+                <div id="card-3" class="card-body card-class-name bg-slate-100 rounded-xl hover:shadow-lg transition">
                     <strong class="rounded-md bg-white font-semibold p-2 w-fit">Meta</strong>
-                    <h2 class="card-title">Add new reaction</h2>
-                    <div class="bg-white rounded-md p-4">
+                    <h2 id="cardTitle-3" class="card-title mt-1">Add new reaction</h2>
+                    <div class="bg-white rounded-md p-4 mt-1">
                         <p>A card component has a figure, a body part, and inside body there are title and actions
                             parts
                         </p>
                     </div>
-                    <div class="card-actions justify-between">
+                    <div class="card-actions justify-between mt-2">
                         <div class="font-semibold">
                             <p>Deadline</p>
                             <p>31 March 2026</p>
                         </div>
-                        <button id="complete-btn" class="btn btn-primary rounded-md ">Completed</button>
+                        <button id="complete-btn-3" class="btn btn-primary rounded-md ">Completed</button>
                     </div>
                 </div>
-                <div class="card-body bg-slate-100 rounded-xl">
+                <div id="card-4" class="card-body card-class-name bg-slate-100 rounded-xl hover:shadow-lg transition">
                     <strong class="rounded-md bg-white font-semibold p-2 w-fit">Programming Hero</strong>
-                    <h2 class="card-title">Fix Vedio Loading Issue</h2>
-                    <div class="bg-white rounded-md p-4">
+                    <h2 id="cardTitle-4" class="card-title mt-1">Fix Vedio Loading Issue</h2>
+                    <div class="bg-white rounded-md p-4 mt-1">
                         <p>A card component has a figure, a body part, and inside body there are title and actions
                             parts
                         </p>
                     </div>
-                    <div class="card-actions justify-between">
+                    <div class="card-actions justify-between mt-2">
                         <div class="font-semibold">
                             <p>Deadline</p>
                             <p>23 March 2026</p>
                         </div>
-                        <button id="complete-btn"class="btn btn-primary rounded-md ">Completed</button>
+                        <button id="complete-btn-4" class="btn btn-primary rounded-md ">Completed</button>
                     </div>
                 </div>
-                <div class="card-body bg-slate-100 rounded-xl">
+                <div id="card-5"  class="card-body card-class-name bg-slate-100 rounded-xl hover:shadow-lg transition">
                     <strong class="rounded-md bg-white font-semibold p-2 w-fit">Google LLC</strong>
-                    <h2 class="card-title">Integrate AI search</h2>
-                    <div class="bg-white rounded-md p-4">
+                    <h2 id="cardTitle-5" class="card-title mt-1">Integrate AI search</h2>
+                    <div class="bg-white rounded-md p-4 mt-1">
                         <p>A card component has a figure, a body part, and inside body there are title and actions
                             parts
                         </p>
                     </div>
-                    <div class="card-actions justify-between">
+                    <div class="card-actions justify-between mt-2">
                         <div class="font-semibold">
                             <p>Deadline</p>
                             <p>01 April 2026</p>
                         </div>
-                        <button id="complete-btn" class="btn btn-primary rounded-md ">Completed</button>
+                        <button id="complete-btn-5" class="btn btn-primary rounded-md ">Completed</button>
                     </div>
                 </div>
-                <div class="card-body bg-slate-100 rounded-xl">
+                <div id="card-6" class="card-body card-class-name bg-slate-100 rounded-xl hover:shadow-lg transition">
                     <strong class="rounded-md bg-white font-semibold p-2 w-fit">Polygon Tech</strong>
-                    <h2 class="card-title">Review Ami Probashi Site</h2>
-                    <div class="bg-white rounded-md p-4">
+                    <h2 id="cardTitle-6" class="card-title mt-1">Review Ami Probashi Site</h2>
+                    <div class="bg-white rounded-md p-4 mt-1">
                         <p>A card component has a figure, a body part, and inside body there are title and actions
                             parts
                         </p>
                     </div>
-                    <div class="card-actions justify-between">
+                    <div class="card-actions justify-between mt-2">
                         <div class="font-semibold">
                             <p>Deadline</p>
                             <p>5 May 2026</p>
                         </div>
-                        <button id="complete-btn" class="btn btn-primary rounded-md ">Completed</button>
+                        <button id="complete-btn-6" class="btn btn-primary rounded-md ">Completed</button>
                     </div>
                 </div>
             </div>
@@ -190,11 +194,11 @@
                 <p class="font-bold">Activity Log</p>
             </div>
 
-            <button class="btn btn-active btn-primary mt-2">Clear History</button>
+            <button id="clear-history" class="btn btn-active btn-primary mt-2">Clear History</button>
 
             <div class="divider"></div>
 
-            <div id="history" class="card-body p-1">
+            <div id="history-1" class="card-body p-1 overflow-y-auto font-bold">
             </div>
 
         </aside>
@@ -203,9 +207,9 @@
 
 
     <!-- Script section-->
-    <script src="./script/dev.js"></script>
-    <script src="./script/button.js"></script>
     <script src="./assign/toogle.js"></script>
+    <script src="./script/button.js"></script>
+    <script src="./script/dev.js"></script>
 
 
 
